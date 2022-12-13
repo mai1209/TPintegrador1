@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/afa08abdc7.js" crossorigin="anonymous"></script>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/style2.css" rel="stylesheet" type="text/css">
+    <script defer src="/js/js.js"></script>
+
+</head>
+
+<body>
+    <!--header-->
+    <%- include('partials/header') %>
+        <!--header-->
+
+        <body>
+
+            <div class="contact_form">
+
+                <div class="formulario">
+                    <h2>Formulario de edicion de productos</h2>
+
+
+
+                    <form class="form">
+
+
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Nombre Producto
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                                placeholder="Escribe nombre de producto">
+                        </p>
+
+                        <p>
+                            <label for="nombre" class="colocar_email">Precio
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="email" name="introducir_Precio" id="preio" required="obligatorio"
+                                placeholder="Precio de producto">
+                        </p>
+
+                        <p>
+                            <label for="nombre" class="colocar_telefono">Cantidad
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="tel" name="introducir_cantidad" id="telefono" placeholder="Cantidad">
+                        </p>
+
+
+                        <p>
+                            <button type="submit" name="enviar_formulario" id="enviar">Editar</button>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+
+                <!--footer-->
+                <%- include('partials/footer') %>
+                <!--footer-->
+
+        </body>
+
+</html>

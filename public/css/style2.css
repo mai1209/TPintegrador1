@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+body {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+   
+}
+
+.contact_form{
+    padding-top: 200px;
+    padding-bottom: 50px;
+    
+}
+.form{
+   
+    width: 50%;
+    margin: auto;
+    border: groove 6px rgba(131, 115, 148, 0.692);
+    max-width: 800px;
+    min-width: 300px;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 20px;
+   
+    
+}
+
+input{
+    height: 40px;
+    border-radius: 5px;
+}
+
+.form{
+    background-color: rgba(194, 191, 191, 0.568);
+}
+
+button{
+   height: 35px;
+
+}
+
+input{
+    padding: 5px;
+}
