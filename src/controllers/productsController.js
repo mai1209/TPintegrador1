@@ -1,36 +1,42 @@
-const { render } = require("ejs")
-const path= require('path');
-const fs = require('fs');
-
-const pathJson = path.resolve(__dirname,'../data/products.json');
-const productsJson= fs.readFileSync(pathJson,'utf-8');
-const products = JSON.parse(productsJson);
+const Product = require('../data/models/Product');
 
 let controller = {
-    home:(req, res) => {
-        res.render('home', {productos:products})
-    },
+  home: async (req, res) => {
+      const products =  await Product.find();
+      res.render('home', { productos: products });
+  }, 
 
-    detail: (req, res)=>{ 
-      products.forEach(product => {
-        if (product.id == req.params.id){
-            res.render('detail', {producto:product});
-        }
-      })
-      res.redirect('/404-page');
-      
-    },
+  detail: async (req, res) => {
+    const product = await Product.findById (req.params.id);
+    res.render("detail" , {producto: product});
 
-    form:(req, res) => {
-      res.render('form', {productos:products})
   },
 
-  edit:(req, res) => {
-    res.render('edit', {productos:products})
-},
+  form: (req, res) => {
+    res.render('form') 
+    
 
-   
-}
+  },
+
+  edit: (req, res) => {
+    res.render('edit');
+  },
+
+  store: async (req, res) =>{
+      if (!req.file){
+        return res.send ("la imagen tiene que ser .jpg, .png, .gif")
+  }
+
+    await Product.create({...req.body, image: req.file.filename})
+    return res.redirect("/products");
+  },
+ 
 
 
-module.exports= controller;
+  
+};
+
+
+
+
+  module.exports = controller;

@@ -21,35 +21,43 @@
 
 
 
-        <form class="form">
+        <form class="form" action="/products/form" method="POST" enctype="multipart/form-data">
 
 
             <p>
-                <label for="nombre" class="colocar_nombre">Nombre Producto
+                <label for="name" class="colocar_nombre">Nombre Producto
                     <span class="obligatorio">*</span>
                 </label>
-                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+                <input type="text" name="name" id="name" required="obligatorio"
                     placeholder="Escribe nombre de producto">
             </p>
 
             <p>
-                <label for="nombre" class="colocar_email">Precio
+                <label for="price" class="colocar_email">Precio
                     <span class="obligatorio">*</span>
                 </label>
-                <input type="email" name="introducir_Precio" id="preio" required="obligatorio"
+                <input type="number" name="price" id="price" required="obligatorio"
                     placeholder="Precio de producto">
             </p>
 
             <p>
-                <label for="nombre" class="colocar_telefono">Cantidad
+                <label for="material" class="colocar_telefono">material
                     <span class="obligatorio">*</span>
                 </label>
-                <input type="tel" name="introducir_cantidad" id="telefono" placeholder="Cantidad">
+                <input type="text" name="material" id="material" placeholder="material">
+            </p>
+
+            <p>
+                <label for="img" class="colocar_telefono">imagen
+                    <span class="obligatorio">*</span>
+                </label>
+                <input type="file" name="img" id="img">
             </p>
 
 
+
             <p>
-                <button type="submit" name="enviar_formulario" id="enviar">Crear</button>
+                <button type="submit" name="enviar_formulario" id="enviar"><a href="/products" class="links-text">Crear</a></button>
             </p>
 
         </form>

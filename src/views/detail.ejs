@@ -14,34 +14,38 @@
 
 <body>
     <%- include('partials/header') %>
-    <div class="detail">
+        <div class="detail">
 
-        <div class="container">
-            <img src="<%=producto.img%>" class="short">
-            <div class="detail-text">
-                <h2>
-                    <%=producto.name %>
-                </h2>
-                <h2>
-                    <%=producto.material %>
-                </h2>
-                <h2>
-                    <%=producto.color %>
-                </h2>
-                <h2>
-                    <%=producto.talle %>
-                </h2>
-                <h2>
-                    <%=producto.price %>
-                </h2>
-                <p>Formas de pago: Efectivo/Tarjeta</p>
-                <button>Comprar</button>
+            <div class="container">
+                <img src="<%=producto.img%>" class="short">
+                <div class="detail-text">
+                    <h2>
+                        <%=producto.name %>
+                    </h2>
+                    <h2>
+                        <%=producto.material %>
+                    </h2>
+                    <h2>
+                        <%=producto.color %>
+                    </h2>
+                    <h2>
+                        <%=producto.talle %>
+                    </h2>
+                    <h2>
+                        <%=producto.price %>
+                    </h2>
+                    <p>Formas de pago: Efectivo/Tarjeta</p>
+                    <div>
+                        
+                        <a href="/products/edit" class="links-text">Editar</a>
+                    </div>
+
+                </div>
             </div>
+
         </div>
 
-    </div>
-       
-    <%- include('partials/footer') %>
+        <%- include('partials/footer') %>
 </body>
 
 </html>
