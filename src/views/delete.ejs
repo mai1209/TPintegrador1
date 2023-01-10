@@ -24,7 +24,7 @@
 
 
 
-                <form class="form" action="/products/edit/<%= producto.id %>"
+                <form class="form" action="/products/delete/<%= producto.id %>"
                  method="POST" enctype="multipart/form-data">
 
                     
@@ -57,11 +57,9 @@
                         <img src="<%=producto.img%>" class="short">
                     </p>
 
-
-
                     <p>
                         <button type="submit" name="enviar_formulario" id="enviar"><a href="/products"
-                                class="links-text">Editar</a></button>
+                                class="links-text">Eliminar</a></button>
                     </p>
 
                 </form>
